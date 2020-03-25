@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todolist</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <style type="text/css">
+      body {
+        background: #e0f0f1;
+      }
+      th tr {
+        font-weight: 600;
+      }
+      .container {
+        margin: 10%;
+        background: #fff;
+        padding: 3%;
+        border: 1px solid #666;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>
