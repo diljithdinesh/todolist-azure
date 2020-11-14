@@ -1,14 +1,14 @@
 version: '3'
 services:
-  db:
-    container_name: cli_postgres
-    image: postgres
-    volumes:
-      - az_pg_data:/var/lib/postgresql/data
-    ports:
-      - '5432:5432'
-    environment:
-      POSTGRES_PASSWORD: password
+  # db:
+  #   container_name: cli_postgres
+  #   image: postgres
+  #   volumes:
+  #     - az_pg_data:/var/lib/postgresql/data
+  #   ports:
+  #     - '5432:5432'
+  #   environment:
+  #     POSTGRES_PASSWORD: password
 
       #  redis:
       #container_name: redis
@@ -27,20 +27,20 @@ services:
     volumes:
       - az_streaming_app:/myapp
     ports:
-      - "4000:3000"
-    links:
-      - "db:cli_postgres"
-      - "redis"
-    depends_on:
-      - db
+      - "3000:3000"
+    #links:
+      #- "db:cli_postgres"
+      #- "redis"
+    # depends_on:
+    #   - db
         #- redis
-      - web
+      #- web
     env_file:
       - .env.prod
 
 
-    volumes:
-            #az_redis_data:
-      az_pg_data:
-      az_streaming_app:
+volumes:
+  az_streaming_app:
+    #   #az_redis_data:
+    #   #az_pg_data:
 
