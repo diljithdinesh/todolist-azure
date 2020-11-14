@@ -11,7 +11,7 @@ COPY . /myapp
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
-EXPOSE 3000
+EXPOSE 3000 2222
 
 # Start the main process.
 #RUN RAILS_ENV=production bundle exec rake assets:precompile
