@@ -1,0 +1,16 @@
+<div class="main-container" style="background: #fff; border: 1px solid #666; margin-top: 5%; margin-left: 10%; margin-right: 10%;  padding: 5%">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @todo.title %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @todo.desc %>
+</p>
+
+<%= link_to 'Edit', edit_todo_path(@todo) %> |
+<%= link_to 'Back', todos_path %>
+</div>
