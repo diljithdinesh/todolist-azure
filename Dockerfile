@@ -3,7 +3,8 @@ RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
 RUN mkdir /myapp
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
-COPY Gemfile.lock /myapp/Gemfile.lock
+#COPY Gemfile.lock /myapp/Gemfile.lock
+RUN gem install rails
 RUN bundle install
 COPY . /myapp
 
